@@ -14,7 +14,7 @@ function resetTextbox() {
 }
 
 
-async function getJson() {
+async function getMosaic() {
     await fetch(searchUrl())
         .then(function(res) {
             return res.json();
@@ -32,6 +32,6 @@ async function getJson() {
 
 function main() {
     document.getElementById("address").addEventListener("input", function() {
-        getJson();
+        getMosaic();
     });
 }
